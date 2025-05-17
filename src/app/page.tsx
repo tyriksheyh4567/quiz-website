@@ -2,15 +2,6 @@
 
 import React, { useState, useEffect, useRef } from "react";
 
-const blueColors = {
-  light: "bg-blue-100",
-  medium: "bg-blue-400",
-  dark: "bg-blue-700",
-  textLight: "text-blue-100",
-  textMedium: "text-blue-600",
-  textDark: "text-blue-900",
-};
-
 const russianTexts = {
   welcomeTitle: "Генератор викторин с помощью ИИ",
   welcomeDescription:
@@ -147,7 +138,7 @@ export default function Home() {
       setCurrentQuestionIndex(0);
       setAnswers(Array(parsedRounds[0].questions.length).fill(null));
       setStep("quiz");
-    } catch (err) {
+    } catch {
       setError("Ошибка при загрузке викторины.");
     } finally {
       setLoading(false);
